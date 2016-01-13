@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondViewController : UIViewController
-
-
+@property(weak,nonatomic) IBOutlet UILabel *firstRow;
 @end
 

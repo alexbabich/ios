@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "CHCSVParser.h"
 
 @interface SecondViewController ()
 
@@ -14,14 +15,34 @@
 
 @implementation SecondViewController
 
+@synthesize firstRow;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"csv"];
+    
+    NSArray *arrayOfArrays = [CHCSVParser parseCSVIntoArrayOfArraysFromFile:file
+                                             withSeparatedCharacterString:@","
+                                                     quoteCharacterString:@"\""];
+    
+    NSLog(@"%@",arrayOfArrays[0]);
+    
+    firstRow.text = [NSString stringWithFormat:@"%@",arrayOfArrays[0][0]];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)gotoList:(id)sender {
+    UIStoryboard *mainStoryboeard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *vc = [mainStoryboeard instantiateViewControllerWithIdentifier:@"listProduct"];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end
