@@ -7,6 +7,8 @@
 //
 
 #import "ProductsTableViewController.h"
+#import "TableCell.h"
+#import "CHCSVParser.h"
 
 @interface ProductsTableViewController ()
 
@@ -14,8 +16,71 @@
 
 @implementation ProductsTableViewController
 
+@synthesize arrayOfArrays, productCount = _productCount, productName = _productName, productPrice = _productPrice, colA = _colA, colB = _colB, colC = _colC;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    NSString *file = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"csv"];
+//    
+//    arrayOfArrays = [CHCSVParser parseCSVIntoArrayOfArraysFromFile:file
+//                                               withSeparatedCharacterString:@","
+//                                                       quoteCharacterString:@"\""];
+//    
+//    NSLog(@"%@",arrayOfArrays[0]);
+//    NSLog(@"%lu",(unsigned long)[arrayOfArrays count]);
+    
+    _colA = [NSMutableArray array];
+    _colB = [NSMutableArray array];
+    _colC = [NSMutableArray array];
+    NSString *fileContents = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"csv"];
+    
+    arrayOfArrays = [CHCSVParser parseCSVIntoArrayOfArraysFromFile:fileContents
+                                                   withSeparatedCharacterString:@""
+                                                           quoteCharacterString:@""];
+//                                                         quoteCharacterString:@"\""];
+//                                                         "Apple iPod touch 5 32Gb\", \"8888\", \"5"
+//                                                         quoteCharacterString:@""];
+//                                                         "\"Apple iPod touch 5 32Gb\", \"8888\", \"5\""
+
+    NSLog(@"arrayOfArrays = %@", arrayOfArrays[0]);
+    
+//    
+//    NSArray* rows = [fileContents componentsSeparatedByString:@"\n"];
+//            NSLog(@"rows = %@", rows);
+    
+    for (NSArray *row in arrayOfArrays){
+        NSLog(@"row = %@", [row[0] componentsSeparatedByString:@","]);
+//        NSArray* columns = [row componentsSeparatedByString:@","];
+        [_colA addObject:row[0]];
+        [_colB addObject:row[1]];
+        [_colC addObject:row[2]];
+    }
+    
+//    NSLog(@"%@", [arrayOfArrays[0] objectAtIndex:1]);
+//    NSLog(@"%lu",(unsigned long)[_colA count]);
+    self.productCount = [[NSArray alloc]
+                     initWithObjects:@"Chevy",
+                     @"BMW",
+                     @"Toyota",
+                     @"Volvo",
+                     @"Smart", nil];
+    
+    self.productName = [[NSArray alloc]
+                      initWithObjects:@"Volt",
+                      @"Mini",
+                      @"Venza",
+                      @"S60",
+                      @"Fortwo", nil];
+    
+    self.productPrice = [[NSArray alloc]
+                      initWithObjects:@"12",
+                      @"14",
+                      @"2435",
+                      @"634",
+                      @"42", nil];
+    
+//    firstRow.text = [NSString stringWithFormat:@"%@",arrayOfArrays[0][0]];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -33,23 +98,32 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 0;
+    
+    return [self.productCount count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *simpleTableIdentifier = @"TableCell";
     
-    // Configure the cell...
+    TableCell *cell = (TableCell *)[tableView dequeueReusableCellWithIdentifier:@"TableCell"];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TableCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    cell.name.text = [self.productName objectAtIndex:indexPath.row];
+    cell.price.text = [self.productPrice objectAtIndex:indexPath.row];
+    cell.count.text = [self.productCount objectAtIndex:indexPath.row];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
