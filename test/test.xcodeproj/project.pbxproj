@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0803FE461C58C10600C8E3A8 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0803FE451C58C10600C8E3A8 /* ThirdViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0803FE4A1C58D3AE00C8E3A8 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0803FE481C58D3AE00C8E3A8 /* TableCell.m */; settings = {ASSET_TAGS = (); }; };
+		0803FE4B1C58D3AE00C8E3A8 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0803FE491C58D3AE00C8E3A8 /* TableCell.xib */; settings = {ASSET_TAGS = (); }; };
 		088BFEEC1C43856800005CC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 088BFEEB1C43856800005CC9 /* main.m */; };
 		088BFEEF1C43856800005CC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 088BFEEE1C43856800005CC9 /* AppDelegate.m */; };
 		088BFEF21C43856800005CC9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088BFEF11C43856800005CC9 /* FirstViewController.m */; };
@@ -17,9 +20,17 @@
 		088BFF071C438AD500005CC9 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088BFF041C438AD500005CC9 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
 		088BFF081C438AD500005CC9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088BFF051C438AD500005CC9 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 		088BFF091C438AD500005CC9 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088BFF061C438AD500005CC9 /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
+		088BFF0D1C43A01900005CC9 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 088BFF0C1C43A01900005CC9 /* CHCSVParser.m */; settings = {ASSET_TAGS = (); }; };
+		088BFF111C43A78400005CC9 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 088BFF101C43A78400005CC9 /* data.csv */; settings = {ASSET_TAGS = (); }; };
+		088BFF221C45446600005CC9 /* ProductsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 088BFF211C45446600005CC9 /* ProductsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0803FE441C58C10600C8E3A8 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirdViewController.h; path = ../ThirdViewController.h; sourceTree = "<group>"; };
+		0803FE451C58C10600C8E3A8 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThirdViewController.m; path = ../ThirdViewController.m; sourceTree = "<group>"; };
+		0803FE471C58D3AD00C8E3A8 /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
+		0803FE481C58D3AE00C8E3A8 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
+		0803FE491C58D3AE00C8E3A8 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		088BFEE71C43856800005CC9 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		088BFEEB1C43856800005CC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		088BFEED1C43856800005CC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,6 +46,11 @@
 		088BFF041C438AD500005CC9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = SOURCE_ROOT; };
 		088BFF051C438AD500005CC9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = SOURCE_ROOT; };
 		088BFF061C438AD500005CC9 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = SOURCE_ROOT; };
+		088BFF0B1C43A01900005CC9 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		088BFF0C1C43A01900005CC9 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		088BFF101C43A78400005CC9 /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
+		088BFF201C45446600005CC9 /* ProductsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductsTableViewController.h; path = ../ProductsTableViewController.h; sourceTree = "<group>"; };
+		088BFF211C45446600005CC9 /* ProductsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductsTableViewController.m; path = ../ProductsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0803FE4C1C58D3B600C8E3A8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0803FE471C58D3AD00C8E3A8 /* TableCell.h */,
+				0803FE481C58D3AE00C8E3A8 /* TableCell.m */,
+				0803FE491C58D3AE00C8E3A8 /* TableCell.xib */,
+			);
+			name = Cell;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		088BFEDE1C43856800005CC9 = {
 			isa = PBXGroup;
 			children = (
@@ -70,13 +97,19 @@
 		088BFEE91C43856800005CC9 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				088BFF0A1C438ADB00005CC9 /* FB_SDK */,
+				088BFF121C43A78A00005CC9 /* db */,
+				088BFF0F1C43A03F00005CC9 /* vendor */,
 				088BFEED1C43856800005CC9 /* AppDelegate.h */,
 				088BFEEE1C43856800005CC9 /* AppDelegate.m */,
 				088BFEF01C43856800005CC9 /* FirstViewController.h */,
 				088BFEF11C43856800005CC9 /* FirstViewController.m */,
 				088BFEF31C43856800005CC9 /* SecondViewController.h */,
 				088BFEF41C43856800005CC9 /* SecondViewController.m */,
+				0803FE441C58C10600C8E3A8 /* ThirdViewController.h */,
+				0803FE451C58C10600C8E3A8 /* ThirdViewController.m */,
+				088BFF201C45446600005CC9 /* ProductsTableViewController.h */,
+				088BFF211C45446600005CC9 /* ProductsTableViewController.m */,
+				0803FE4C1C58D3B600C8E3A8 /* Cell */,
 				088BFEF61C43856800005CC9 /* Main.storyboard */,
 				088BFEF91C43856800005CC9 /* Assets.xcassets */,
 				088BFEFB1C43856800005CC9 /* LaunchScreen.storyboard */,
@@ -102,6 +135,34 @@
 				088BFF061C438AD500005CC9 /* FBSDKShareKit.framework */,
 			);
 			name = FB_SDK;
+			sourceTree = "<group>";
+		};
+		088BFF0E1C43A02300005CC9 /* CHCSVParser */ = {
+			isa = PBXGroup;
+			children = (
+				088BFF0B1C43A01900005CC9 /* CHCSVParser.h */,
+				088BFF0C1C43A01900005CC9 /* CHCSVParser.m */,
+			);
+			name = CHCSVParser;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		088BFF0F1C43A03F00005CC9 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				088BFF0E1C43A02300005CC9 /* CHCSVParser */,
+				088BFF0A1C438ADB00005CC9 /* FB_SDK */,
+			);
+			name = vendor;
+			sourceTree = "<group>";
+		};
+		088BFF121C43A78A00005CC9 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				088BFF101C43A78400005CC9 /* data.csv */,
+			);
+			name = db;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,9 +222,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088BFF111C43A78400005CC9 /* data.csv in Resources */,
 				088BFEFD1C43856800005CC9 /* LaunchScreen.storyboard in Resources */,
 				088BFEFA1C43856800005CC9 /* Assets.xcassets in Resources */,
 				088BFEF81C43856800005CC9 /* Main.storyboard in Resources */,
+				0803FE4B1C58D3AE00C8E3A8 /* TableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +240,11 @@
 				088BFEF51C43856800005CC9 /* SecondViewController.m in Sources */,
 				088BFEEF1C43856800005CC9 /* AppDelegate.m in Sources */,
 				088BFEF21C43856800005CC9 /* FirstViewController.m in Sources */,
+				088BFF0D1C43A01900005CC9 /* CHCSVParser.m in Sources */,
 				088BFEEC1C43856800005CC9 /* main.m in Sources */,
+				088BFF221C45446600005CC9 /* ProductsTableViewController.m in Sources */,
+				0803FE4A1C58D3AE00C8E3A8 /* TableCell.m in Sources */,
+				0803FE461C58C10600C8E3A8 /* ThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +401,7 @@
 				088BFF031C43856800005CC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

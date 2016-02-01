@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondViewController : UIViewController
-
-
+@property (weak, nonatomic) IBOutlet UIButton *openView;
+@property(weak,nonatomic) IBOutlet UILabel *firstRow;
 @end
 
